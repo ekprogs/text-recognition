@@ -3,7 +3,7 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # ----------------------------------------------------------------------------------------------------------------------
-# EXAMPLE AWS PROVIDER SETUP
+# AWS PROVIDER SETUP
 # ----------------------------------------------------------------------------------------------------------------------
 
 provider "aws" {
@@ -45,7 +45,7 @@ module "lambda-function" {
 
   role_arn = module.iam_role.role.arn
 
-  layer_arns = [  ]
+  layer_arns = []
 
   module_tags = {
     Environment = "Dev"
@@ -68,6 +68,8 @@ module "iam_role" {
       identifiers = ["lambda.amazonaws.com"]
     }
   ]
+
+  policy_arns = ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"]
 
   tags = {
     Environment = "Dev"
