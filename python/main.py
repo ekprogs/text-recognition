@@ -14,7 +14,7 @@ def lambda_handler(event, context):
     return {"statusCode": 200, "body": result}
 
 
-# Uncomment all logics below to text locally
+# Uncomment all logics below to test locally
 # with open('event.json', 'r') as f:
 #   data = f.read()
   
