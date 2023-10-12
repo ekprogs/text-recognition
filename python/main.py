@@ -15,7 +15,7 @@ def lambda_handler(event, context):
 
 
 # Uncomment all logics below to test locally
-# with open('event.json', 'r') as f:
+# with open('image.json', 'r') as f:
 #   data = f.read()
   
 # event = {"body": data}
